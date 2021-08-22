@@ -3,9 +3,9 @@ const VoiceResponse = require("twilio/lib/twiml/VoiceResponse");
 
 class Twilio {
   phoneNumber = "+61253012361";
-  phoneNumberSid = "PN0d865080ff5b76f6e06ceabd61d99b03";
-  tokenSid = "SKab2e3a7c73682407dd01e05125a74df4";
-  tokenSecret = "RMLHsztrFqBfMosfuOIaC7w1SoK74Iq8";
+  phoneNumberSid = "PN5236a7ac466bf523b996838976cbb70c";
+  tokenSid = "SK91212f7fefb6e89cb7bef6e9e7f6d91a";
+  tokenSecret = "5pduOFDoOTZUNHDDAKQOJKz23beyC1py";
   verify = "VA05343f46a240a7cee22301b15750502f";
   accountSid = "AC039214bb5add629c9a3b255606e495b0";
   client;

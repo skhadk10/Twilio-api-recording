@@ -50,15 +50,16 @@ app.post("/verify", async (req, res) => {
 });
 
 // new call process
-app.post("/call-new", (req, res) => {
-  console.log("receive new calls");
+app.post("/makecall", (req, res) => {
+  console.log("receive new calls",req.body);
+  io.emit('makecall',{data:req.body})
   const response = twilio.voiceResponse("Thank you for your call");
   res.type("text/xml");
   res.send(response.toString());
 });
 
 //  call status
-app.post("/call-status-changed", (req, res) => {
+app.post("/callStatusChanged", (req, res) => {
   console.log("call status changed");
   res.send("ok");
 });
