@@ -8,9 +8,9 @@ import NavBar from "./component/NavBar.js";
 import CallCanter from "./component/CallCanter.js";
 import { Immer } from "immer";
 function App() {
-  const[calls,setCalls]=Immer({
-    call:[]
-  })
+  // const[calls,setCalls]=Immer({
+  //   call:[]
+  // })
    const [user, setUser] = useImmer({
     username: "",
     mobileNumber: "",
@@ -22,11 +22,11 @@ function App() {
     socket.on("disconnect", () => {
       console.log("socket disconnected");
     });
-    socket.on('makecall',(data)=>{
-      setCalls(drafts=>{
-        drafts.calls.push(data)
-      })
-    })
+    // socket.on('makecall',(data)=>{
+    //   setCalls(drafts=>{
+    //     drafts.calls.push(data)
+    //   })
+    // })
   });
 
  
@@ -73,7 +73,7 @@ function App() {
           sentVerificationCode={sentVerificationCode}
         />
       )}
-      {calls.calls.length>0 ?? calls.calls.map(call=><h1>call.CallSid</h1>)}
+      {/* {calls.calls.length>0 ?? calls.calls.map(call=><h1>call.CallSid</h1>)} */}
     </div>
   );
 }

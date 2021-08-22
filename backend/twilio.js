@@ -34,9 +34,23 @@ class Twilio {
 
   voiceResponse(message) {
     const twiml = new VoiceResponse();
+  
     twiml.say(
       {
         voice: "Polly.Aditi",
+        loop: 2,
+      },
+      message
+    );
+    twiml.record()
+    twiml.hangup()
+    return twiml;
+  }
+  voiceRecording(message) {
+    const twiml = new VoiceResponse();
+    twiml.record(
+      {
+        voice: "Polly.Bianca",
         loop: 2,
       },
       message
